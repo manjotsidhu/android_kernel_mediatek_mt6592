@@ -129,6 +129,8 @@ extern LCM_DRIVER hx8389b_qhd_dsi_vdo_tianma055xdhp_lcm_drv;
 extern LCM_DRIVER cpt_claa101fp01_dsi_vdo_lcm_drv;
 extern LCM_DRIVER h070d_18dm_lcm_drv;
 extern LCM_DRIVER hx8394a_hd720_dsi_vdo_tianma_lcm_drv;
+extern LCM_DRIVER hx8394_dsi_vdo_truly_hd720_ips_lcm_drv;//++++rgk bug-id:no add by hyperion70 20150708
+extern LCM_DRIVER otm1283a_dsi_vdo_trust_hd720_ips_lcm_drv;//++++rgk bug-id:no add by hyperion70 20150708
 extern LCM_DRIVER cpt_clap070wp03xg_sn65dsi83_lcm_drv;
 extern LCM_DRIVER nt35520_hd720_tm_lcm_drv;
 extern LCM_DRIVER nt35520_hd720_boe_lcm_drv;
@@ -138,118 +140,9 @@ extern LCM_DRIVER r69429_wuxga_dsi_vdo_lcm_drv;
 extern LCM_DRIVER r69429_wuxga_dsi_cmd_lcm_drv;
 extern LCM_DRIVER rm68210_hd720_dsi_ufoe_cmd_lcm_drv;
 extern LCM_DRIVER r63311_fhd_dsi_vedio_lcm_drv;
-extern LCM_DRIVER ili9806c_dsi_vdo_djn_fwvga_oncell_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140227
-extern LCM_DRIVER ili9806c_dsi_vdo_djn_fwvga_lcm_drv;		//++++rgk bug_id: none add by jiangwanwei 140228
-//++++rgk bug-id:no add by yangjuwei 20140303 start
-extern LCM_DRIVER ili9806c_dsi_vdo_by_fwvga_oncell_lcm_drv; 
-extern LCM_DRIVER hx8379a_dsi_vdo_by_fwvga_lcm_drv;
-extern LCM_DRIVER ili9806c_dsi_vdo_azet_fwvga_oncell_lcm_drv;
-extern LCM_DRIVER otm9605a_dsi_vdo_djn_qhd_lcm_drv;  // yangjuwei add
-extern LCM_DRIVER hx8394_dsi_vdo_txd_ips_hd_lcm_drv; //add by yangjuwei
-extern LCM_DRIVER nt35521_dsi_auo_by_hd_lcm_drv; //add by yangjuwei
-extern LCM_DRIVER ili9806e_dsi_vdo_djn_fwvga_lcm_drv;
-extern LCM_DRIVER hx8389b_dsi_vdo_txd_qhd_lcm_drv; // zhoulidong add 
-extern LCM_DRIVER otm1283a_dsi_vdo_hlt_hd_lcm_drv; //add by yangjuwei
-extern LCM_DRIVER otm1283a_dsi_vdo_djn_hd_lcm_drv;//zhoulidong add 
-extern LCM_DRIVER ili9806e_dsi_vdo_hlt_fwvga_oncell_lcm_drv;
-//++++rgk bug-id:no add by yangjuwei 20140303 end
-extern LCM_DRIVER otm9605a_dsi_vdo_hlt_qhd_ips_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140306
-extern LCM_DRIVER otm9605a_dsi_vdo_djn_qhd_ips_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140306
-extern LCM_DRIVER hx8394_dsi_vdo_truly_hd720_ips_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140307
-extern LCM_DRIVER hx8394_dsi_vdo_truly_cmi_hd720_ips_lcm_drv;
-extern LCM_DRIVER otm8018b_dsi_vdo_txd_fwvga_tn_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140317
-extern LCM_DRIVER ili9806c_dsi_vdo_djn_fwvga_tn_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140317
-extern LCM_DRIVER hx8379a_dsi_vdo_by_fwvga_ips_lcm_drv;
-extern LCM_DRIVER otm1283a_dsi_vdo_trust_hd720_ips_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140401
-extern LCM_DRIVER ili9806c_dsi_vdo_djn_fwvga_oncell_j511_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140221
-extern LCM_DRIVER ili9806e_dsi_vdo_dijin_fwvga_ips_j511_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140318
-extern LCM_DRIVER otm8019a_fwvga_dsi_vdo_trust_lcm_drv;
-extern LCM_DRIVER r69429_wuxga_dsi_cmd_songxia_lcm_drv;//++++rgk bug_id:null add by yangjuwei 20140313
-
-extern LCM_DRIVER ili9806e_dsi_vdo_hlt_fwvga_ips_j502_lcm_drv;//++++rgk anxiang.xiao add  20140324
-extern LCM_DRIVER ili9806e_dsi_vdo_dijin_fwvga_ips_j502_lcm_drv;//++++rgk anxiang.xiao add  20140324
-extern LCM_DRIVER hx8379a_dsi_vdo_azet_ips_lcm_drv;// add anxiang.xiao
-extern LCM_DRIVER otm8018b_dsi_vdo_dijing_fwvga_boe_ips_lcm_drv;//+++rgk bug-id:null fix:add by sunyangmei 0140526
-extern LCM_DRIVER ili9806c_dsi_vdo_txd_lcm_drv;	 	 // add anxiang.xiao 
-extern LCM_DRIVER ili9806c_dsi_vdo_azet_ips_lcm_drv;   // add anxiang.xiao
-extern LCM_DRIVER ili9806c_dsi_vdo_djn_lcm_drv;		// add anxiang.xiao
-extern LCM_DRIVER ili9806c_dsi_vdo_txd_ips_lcm_drv;// add anxiang.xiao
-extern LCM_DRIVER otm8018b_dsi_vdo_trust_lcm_drv;	// add anxiang.xiao
-extern LCM_DRIVER hx8379a_dsi_vdo_azet_wvga_ips_lcm_drv;//++++rgk bug_id:null add by yangjuwei 20140508
-
-extern LCM_DRIVER r63311_dsi_vdo_fhd_ips_lcm_drv;//++++rgk bug_id:null add by yangjuwei 20140528
-
-extern LCM_DRIVER r63311_fhd_dsi_vdo_truly_lcm_drv;
-extern LCM_DRIVER r63315_fhd_dsi_vdo_truly_lcm_drv;
-extern LCM_DRIVER otm8019a_fwvga_dsi_vdo_trust_ips_oncell_lcm_drv;  //sym add in 20140609
-
-extern LCM_DRIVER otm1283a_dsi_vdo_trust_hd720_cmi_ips_lcm_drv;//++++rgk bug-id:no add by yangjuwei 20140703
-extern LCM_DRIVER nt35521_hd720_dsi_vdo_djn_boe_ips_oncell_lcm_drv;  //sym add in 20140704
-extern LCM_DRIVER hx8394_dsi_vdo_djn_hd720_cpt_ips_oncell_lcm_drv;
-extern LCM_DRIVER otm1283a_dsi_vdo_hlt_boe_hd720_ips_lcm_drv; //sym add in 20140721
-
-extern LCM_DRIVER otm1283a_hd720_dsi_vdo_belij_lcm_drv;//add by wuhao 2014/7/24
-extern LCM_DRIVER hx8379c_dsi_vdo_azet_wvga_ips_lcm_drv;//sym add in 20140725
-extern LCM_DRIVER ili9806e_dsi_vdo_hlt_fwvga_ips_d5020_lcm_drv;
-extern LCM_DRIVER hx8379c_dsi_vdo_trust_fwvga_ips_lcm_drv;
-extern LCM_DRIVER hx8394d_dsi_vdo_djn_boe_hd720_ips_lcm_drv;
-extern LCM_DRIVER hx8394d_hd720_dsi_vdo_s35_lcm_drv;
-extern LCM_DRIVER otm1287_hd720_dsi_vdo_boyi_s35_lcm_drv;
-
+extern LCM_DRIVER lvds_wsvga_mt8193_lcm_drv;
 LCM_DRIVER* lcm_driver_list[] = 
 { 
-#if defined(HX8394D_HD720_DSI_VDO_S35)
-	&hx8394d_hd720_dsi_vdo_s35_lcm_drv,
-#endif
-#if defined(OTM1287_HD720_DSI_VDO_BOYI_S35)
-	&otm1287_hd720_dsi_vdo_boyi_s35_lcm_drv,
-#endif
-#if defined(HX8394D_DSI_VDO_DJN_BOE_HD720_IPS)
-	&hx8394d_dsi_vdo_djn_boe_hd720_ips_lcm_drv,
-#endif	
-
-	#if defined(HX8379C_DSI_VDO_AZET_WVGA_IPS)
-	&hx8379c_dsi_vdo_azet_wvga_ips_lcm_drv,
-#endif	
-#if defined(OTM1283A_DSI_VDO_HLT_BOE_HD720_IPS)
-	&otm1283a_dsi_vdo_hlt_boe_hd720_ips_lcm_drv,
-#endif	
-	
-//add by yangjuwei
-#if defined(OTM1283A_DSI_VDO_HLT_HD)
-	&otm1283a_dsi_vdo_hlt_hd_lcm_drv,
-#endif
-
-// anxiang.xiao add start
-#if defined(HX8379A_DSI_VDO_AZET_IPS)
-		&hx8379a_dsi_vdo_azet_ips_lcm_drv,
-#endif
-#if defined(ILI9806C_DSI_VDO_DJN)	
-	&ili9806c_dsi_vdo_djn_lcm_drv, 
-#endif
-#if defined(ILI9806C_DSI_VDO_AZET_IPS)	
-	&ili9806c_dsi_vdo_azet_ips_lcm_drv, 
-#endif
-#if defined(ILI9806C_DSI_VDO_TXD)	
-	&ili9806c_dsi_vdo_txd_lcm_drv, 
-#endif
-#if defined(ILI9806C_DSI_VDO_TXD_IPS)
-		&ili9806c_dsi_vdo_txd_ips_lcm_drv,
-#endif
-#if defined(OTM8018B_DSI_VDO_TRUST)	
-	&otm8018b_dsi_vdo_trust_lcm_drv, 
-#endif
-//anxiang.xiao add end
-
-#if defined(HX8379A_DSI_VDO_BY_FWVGA_IPS)
-	&hx8379a_dsi_vdo_by_fwvga_ips_lcm_drv,
-#endif
-//++++rgk bug_id: none modify by jiangwanwei 140228 start++++
-#if defined(ILI9806C_DSI_VDO_DJN_FWVGA)
-	&ili9806c_dsi_vdo_djn_fwvga_lcm_drv,
-#endif
-//++++rgk bug_id: none add by jiangwanwei 140228 end++++
-
 #if defined(R63311_FHD_DSI_VDO)
 	&r63311_fhd_dsi_vedio_lcm_drv,
 #endif
@@ -686,28 +579,11 @@ LCM_DRIVER* lcm_driver_list[] =
 #if defined(NT35520_HD720_DSI_CMD_BOE)
   &nt35520_hd720_boe_lcm_drv,
 #endif
-
-//juwei yang add
-#if defined(OTM9605A_DSI_VDO_DJN_QHD)
-		&otm9605a_dsi_vdo_djn_qhd_lcm_drv,
-#endif
-
 #if defined(NT35521_HD720_DSI_VDO_BOE)
   &nt35521_hd720_dsi_vdo_boe_lcm_drv,
 #endif
-
-//juwei yang add
-#if defined(HX8394_DSI_VDO_TXD_IPS_HD)
-		&hx8394_dsi_vdo_txd_ips_hd_lcm_drv,
-#endif
-
 #if defined(NT35521_HD720_DSI_VIDEO_TM)
   &nt35521_hd720_tm_lcm_drv,
-#endif
-
-//add by yangjuwei
-#if defined(NT35521_DSI_AUO_BY_HD)
-		&nt35521_dsi_auo_by_hd_lcm_drv,
 #endif
 #if defined(H070D_18DM)
     &h070d_18dm_lcm_drv,
@@ -721,173 +597,30 @@ LCM_DRIVER* lcm_driver_list[] =
 	&hx8394a_hd720_dsi_vdo_tianma_lcm_drv,
 #endif
 
-#if defined(HX8389B_DSI_VDO_TXD_QHD)
-		&hx8389b_dsi_vdo_txd_qhd_lcm_drv,
+//++++rgk bug-id:no add by hyperion70 20150708 start
+#if defined(HX8394_DSI_VDO_TRULY_HD720_IPS)
+	&hx8394_dsi_vdo_truly_hd720_ips_lcm_drv,
 #endif
+//++++rgk bug-id:no add by hyperion70 20150708 end
+
+//++++rgk bug-id:no add by hyperion70 20150708 start
+#if defined(OTM1283A_DSI_VDO_TRUST_HD720_IPS)
+	&otm1283a_dsi_vdo_trust_hd720_ips_lcm_drv,
+#endif
+//++++rgk bug-id:no add by hyperion70 20150708 end
 
 #if defined(R69429_WUXGA_DSI_CMD)
 	&r69429_wuxga_dsi_cmd_lcm_drv,
 #endif
 
-
-
 #if defined(RM68210_HD720_DSI_UFOE_CMD)
   &rm68210_hd720_dsi_ufoe_cmd_lcm_drv,
 #endif
 
-#if defined(OTM1283A_DSI_VDO_DJN_HD)
-		&otm1283a_dsi_vdo_djn_hd_lcm_drv,
+#if defined(LVDS_WSVGA_MT8193)
+	&lvds_wsvga_mt8193_lcm_drv,
 #endif
-
-//++++rgk bug-id:no add by yangjuwei 20140227 start
-#if defined(ILI9806C_DSI_VDO_DJN_FWVGA_ONCELL)
-	&ili9806c_dsi_vdo_djn_fwvga_oncell_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140227 end
-
-
-//++++rgk bug-id:no add by yangjuwei 20140303 start
-#if defined(ILI9806C_DSI_VDO_BY_FWVGA_ONCELL)
-	&ili9806c_dsi_vdo_by_fwvga_oncell_lcm_drv,
-#endif 
-#if defined(HX8379A_DSI_VDO_BY_FWVGA)
-	&hx8379a_dsi_vdo_by_fwvga_lcm_drv,
-#endif
-#if defined(ILI9806C_DSI_VDO_AZET_FWVGA_ONCELL)
-	&ili9806c_dsi_vdo_azet_fwvga_oncell_lcm_drv,
-#endif
-#if defined(ILI9806E_DSI_VDO_DJN_FWVGA)
-	&ili9806e_dsi_vdo_djn_fwvga_lcm_drv,
-#endif
-#if defined(ILI9806E_DSI_VDO_HLT_FWVGA_ONCELL)
-	&ili9806e_dsi_vdo_hlt_fwvga_oncell_lcm_drv,
-#endif
-
-//++++rgk bug-id:no add by yangjuwei 20140303 end
-
-//++++rgk bug-id:no add by yangjuwei 20140306 start
-#if defined(OTM9605A_DSI_VDO_HLT_QHD_IPS)
-	&otm9605a_dsi_vdo_hlt_qhd_ips_lcm_drv,
-#endif
-
-#if defined(OTM9605A_DSI_VDO_DJN_QHD_IPS)
-	&otm9605a_dsi_vdo_djn_qhd_ips_lcm_drv,
-#endif
-
-//++++rgk bug-id:no add by yangjuwei 20140306 end
-
-//++++rgk bug-id:no add by yangjuwei 20140307 start
-#if defined(HX8394_DSI_VDO_TRULY_HD720_IPS)
-	&hx8394_dsi_vdo_truly_hd720_ips_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140307 end
-
-#if defined(HX8394_DSI_VDO_TRULY_CMI_HD720_IPS)
-	&hx8394_dsi_vdo_truly_cmi_hd720_ips_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140317 start
-#if defined(OTM8018B_DSI_VDO_TXD_FWVGA_TN)
-	&otm8018b_dsi_vdo_txd_fwvga_tn_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140317 end
-
-//++++rgk bug-id:no add by yangjuwei 20140317 start
-#if defined(ILI9806C_DSI_VDO_DJN_FWVGA_TN)
-	&ili9806c_dsi_vdo_djn_fwvga_tn_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140317 end
-
-//++++rgk bug-id:no add by yangjuwei 20140401 start
-#if defined(OTM1283A_DSI_VDO_TRUST_HD720_IPS)
-	&otm1283a_dsi_vdo_trust_hd720_ips_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140401 end
-
-//++++rgk bug-id:no add by yangjuwei 20140221 start
-#if defined(ILI9806C_DSI_VDO_DJN_FWVGA_ONCELL_J511)
-		&ili9806c_dsi_vdo_djn_fwvga_oncell_j511_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140221 end
-
-//++++rgk bug-id:no add by yangjuwei 20140318 start
-#if defined(ILI9806E_DSI_VDO_DIJIN_FWVGA_IPS_J511)
-	&ili9806e_dsi_vdo_dijin_fwvga_ips_j511_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140318 end
-
-#if defined(OTM8019A_FWVGA_DSI_VDO_TRUST)
-	&otm8019a_fwvga_dsi_vdo_trust_lcm_drv,
-#endif
-//++++rgk bug_id:null add by yangjuwei 20140313 start
-#if defined(R69429_WUXGA_DSI_CMD_SONGXIA)
-	&r69429_wuxga_dsi_cmd_songxia_lcm_drv,
-#endif
-//++++rgk bug_id:null add by yangjuwei 20140313 end
-
-//++++rgk bug_id:null add by yangjuwei 20140508 start
-#if defined(HX8379A_DSI_VDO_AZET_WVGA_IPS)
-	&hx8379a_dsi_vdo_azet_wvga_ips_lcm_drv,
-#endif
-//++++rgk bug_id:null add by yangjuwei 20140508 end
-
-
-//++++rgk bug_id:null add by yangjuwei 20140528 start
-#if defined(R63311_DSI_VDO_FHD_IPS)
-	&r63311_dsi_vdo_fhd_ips_lcm_drv,
-#endif
-//++++rgk bug_id:null add by yangjuwei 20140528 end
-
-
-
-#if defined(R63311_FHD_DSI_VDO_TRULY)
-	&r63311_fhd_dsi_vdo_truly_lcm_drv,
-#endif
-#if defined(R63315_FHD_DSI_VDO_TRULY)
-	&r63315_fhd_dsi_vdo_truly_lcm_drv,
-#endif
-#if defined(ILI9806E_DSI_VDO_HLT_FWVGA_IPS_J502)
-	&ili9806e_dsi_vdo_hlt_fwvga_ips_j502_lcm_drv, 
-#endif
-
-#if defined(ILI9806E_DSI_VDO_DIJIN_FWVGA_IPS_J502)
-	&ili9806e_dsi_vdo_dijin_fwvga_ips_j502_lcm_drv, 
-#endif
-
-//add otm8018 dijing fwvga lcd by sym in 20140526 start
-#if defined(OTM8018B_DSI_VDO_DIJING_FWVGA_BOE_IPS)
-	&otm8018b_dsi_vdo_dijing_fwvga_boe_ips_lcm_drv,
-#endif
-#if defined(OTM8019A_FWVGA_DSI_VDO_TRUST_IPS_ONCELL)
-	&otm8019a_fwvga_dsi_vdo_trust_ips_oncell_lcm_drv,
-#endif
-
-//++++rgk bug-id:no add by yangjuwei 20140703 start
-#if defined(OTM1283A_DSI_VDO_TRUST_HD720_CMI_IPS)
-	&otm1283a_dsi_vdo_trust_hd720_cmi_ips_lcm_drv,
-#endif
- //sym add in 20140704
-#if defined(NT35521_HD720_DSI_VDO_DJN_BOE_IPS_ONCELL)
-	&nt35521_hd720_dsi_vdo_djn_boe_ips_oncell_lcm_drv,
-#endif
-//++++rgk bug-id:no add by yangjuwei 20140703 end
-
-#if defined(HX8394_DSI_VDO_DJN_HD720_CPT_IPS_ONCELL)
-	&hx8394_dsi_vdo_djn_hd720_cpt_ips_oncell_lcm_drv,
-#endif
-
-#if defined(OTM1283A_HD720_DSI_VDO_BELIJ)
-	&otm1283a_hd720_dsi_vdo_belij_lcm_drv,
-#endif
-#if defined(ILI9806E_DSI_VDO_HLT_FWVGA_IPS_D5020)
-	&ili9806e_dsi_vdo_hlt_fwvga_ips_d5020_lcm_drv,
-#endif
-#if(HX8379C_DSI_VDO_TRUST_FWVGA_IPS)
-	&hx8379c_dsi_vdo_trust_fwvga_ips_lcm_drv,
-#endif
-
 };
-
-
 
 #define LCM_COMPILE_ASSERT(condition) LCM_COMPILE_ASSERT_X(condition, __LINE__)
 #define LCM_COMPILE_ASSERT_X(condition, line) LCM_COMPILE_ASSERT_XX(condition, line)
@@ -904,7 +637,7 @@ static unsigned char lcd_id_pins_value = 0xFF;
 
 /******************************************************************************
 Function:       which_lcd_module_triple
-  Description:    read LCD ID PIN status,could identify three status:high\A1\A2low\A1\A2float
+  Description:    read LCD ID PIN status,could identify three status:high¡¢low¡¢float
   Input:           none
   Output:         none
   Return:         LCD ID1|ID0 value
