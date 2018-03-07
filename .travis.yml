@@ -1,0 +1,33 @@
+language: c
+
+#######################################################################################
+
+
+os:
+  - linux
+  
+addons:
+  apt:
+    packages:
+      - curl
+
+#######################################################################################
+
+
+before_install:
+
+  - sudo apt-get update -qq  
+  # downloading the latest version of the linaro toolchain. 
+  - git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 ~/arm-eabi-4.8/
+
+#######################################################################################
+
+
+script: 
+  - ./travis.sh 
+  - cp out/arch/arm/boot/zImage tools/zImage
+  - cd tools && chmod a+x mkimage
+  - ./mkimage zImage KERNEL > zImage_with_header
+  - cd ../
+  - ./zip.sh
+  - curl --upload-file kernel.zip https://transfer.sh/kernel.zip
