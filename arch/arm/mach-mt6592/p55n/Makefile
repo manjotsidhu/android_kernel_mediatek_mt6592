@@ -19,6 +19,6 @@ obj-y	+=  leds/
 obj-y	+=  keypad/
 obj-y	+=  sound/
 obj-y	+=  accdet/
-
+obj-y	+=  lcm/
 obj-y	+=  hdmi/
 

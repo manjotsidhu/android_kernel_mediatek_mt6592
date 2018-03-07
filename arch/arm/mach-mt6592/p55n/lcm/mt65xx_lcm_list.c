@@ -18,6 +18,7 @@
 #define LCD_DEBUG(fmt)  printk(fmt)
 #endif
 
+extern LCM_DRIVER otm1287_hd720_dsi_vdo_boyi_longwei_lcm_drv;
 extern LCM_DRIVER lp079x01_lcm_drv;
 extern LCM_DRIVER hx8369_lcm_drv;
 extern LCM_DRIVER hx8369_6575_lcm_drv;
@@ -141,8 +142,17 @@ extern LCM_DRIVER r69429_wuxga_dsi_cmd_lcm_drv;
 extern LCM_DRIVER rm68210_hd720_dsi_ufoe_cmd_lcm_drv;
 extern LCM_DRIVER r63311_fhd_dsi_vedio_lcm_drv;
 extern LCM_DRIVER lvds_wsvga_mt8193_lcm_drv;
+extern LCM_DRIVER hx8394d_hd720_dsi_vdo_s35_lcm_drv;
+extern LCM_DRIVER otm1287_hd720_dsi_vdo_boyi_s35_lcm_drv;
+
 LCM_DRIVER* lcm_driver_list[] = 
 { 
+#if defined(HX8394D_HD720_DSI_VDO_S35)
+	&hx8394d_hd720_dsi_vdo_s35_lcm_drv,
+#endif
+#if defined(OTM1287_HD720_DSI_VDO_BOYI_S35)
+	&otm1287_hd720_dsi_vdo_boyi_s35_lcm_drv,
+#endif
 #if defined(R63311_FHD_DSI_VDO)
 	&r63311_fhd_dsi_vedio_lcm_drv,
 #endif
@@ -153,6 +163,10 @@ LCM_DRIVER* lcm_driver_list[] =
 
 #if defined(LP079X01)
 	&lp079x01_lcm_drv,
+#endif
+
+#if defined(OTM1287_HD720_DSI_VDO_BOYI_LONGWEI)
+        &otm1287_hd720_dsi_vdo_boyi_longwei_lcm_drv,
 #endif
 
 #if defined(HX8369)
@@ -637,7 +651,7 @@ static unsigned char lcd_id_pins_value = 0xFF;
 
 /******************************************************************************
 Function:       which_lcd_module_triple
-  Description:    read LCD ID PIN status,could identify three status:high¡¢low¡¢float
+  Description:    read LCD ID PIN status,could identify three status:high\A1\A2low\A1\A2float
   Input:           none
   Output:         none
   Return:         LCD ID1|ID0 value

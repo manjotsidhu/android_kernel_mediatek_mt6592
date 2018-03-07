@@ -82,7 +82,7 @@ obj-$(CONFIG_MTK_WD_KICKER)		+= wdk/
 obj-$(CONFIG_MTK_MT_LOGGER)	+= mt_logger/
 obj-$(CONFIG_MD32_SUPPORT)   += md32/
 obj-y += dramc/
-obj-y   += lcm/
+#obj-y   += lcm/
 
 ifeq ($(CONFIG_MTK_SENSOR_SUPPORT),y)
 ifneq (,$(filter $(CONFIG_CUSTOM_KERNEL_SENSORHUB), "SCP_shf SCP_sensorHub" "CWSTM32" "ICM30628"))
