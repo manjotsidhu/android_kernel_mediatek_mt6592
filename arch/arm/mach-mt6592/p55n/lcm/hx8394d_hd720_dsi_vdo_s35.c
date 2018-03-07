@@ -230,46 +230,28 @@ static void lcm_get_params(LCM_PARAMS *params)
 {
     memset(params, 0, sizeof(LCM_PARAMS));
 
-    params->type   = LCM_TYPE_DSI;
-
-    params->width  = FRAME_WIDTH;
-    params->height = FRAME_HEIGHT;
-
-    // enable tearing-free
-    params->dbi.te_mode                 = LCM_DBI_TE_MODE_DISABLED;
-    params->dbi.te_edge_polarity        = LCM_POLARITY_RISING;
-
-    params->dsi.mode   = SYNC_PULSE_VDO_MODE;
-
-    // DSI
-    /* Command mode setting */
-    params->dsi.LANE_NUM                = LCM_THREE_LANE;
-    //The following defined the fomat for data coming from LCD engine.
-    params->dsi.data_format.color_order = LCM_COLOR_ORDER_RGB;
-    params->dsi.data_format.trans_seq   = LCM_DSI_TRANS_SEQ_MSB_FIRST;
-    params->dsi.data_format.padding     = LCM_DSI_PADDING_ON_LSB;
-    params->dsi.data_format.format      = LCM_DSI_FORMAT_RGB888;
-
-    params->dsi.intermediat_buffer_num = 0;//because DSI/DPI HW design change, this parameters should be 0 when video mode in MT658X; or memory leakage
-
-    params->dsi.PS=LCM_PACKED_PS_24BIT_RGB888;
-
-    params->dsi.word_count=720*3;
-    params->dsi.vertical_sync_active                = 2;
-    params->dsi.vertical_backporch                  = 16;
-    params->dsi.vertical_frontporch                 = 9;
-    params->dsi.vertical_active_line                = FRAME_HEIGHT;
-    params->dsi.horizontal_sync_active              = 18;
-    params->dsi.horizontal_backporch                = 50;
-    params->dsi.horizontal_frontporch               = 50;
-    params->dsi.horizontal_active_pixel             = FRAME_WIDTH;
-
-
-    // Video mode setting
-    //params->dsi.PS=LCM_PACKED_PS_24BIT_RGB888;
-    //params->dsi.pll_select=1;
-    //params->dsi.PLL_CLOCK = LCM_DSI_6589_PLL_CLOCK_253_5;//LCM_DSI_6589_PLL_CLOCK_240_5;//LCM_DSI_6589_PLL_CLOCK_227_5;//this value must be in MTK suggested table 227_5
-	params->dsi.PLL_CLOCK = 250;
+    params->type = 2;
+    params->dsi.data_format.format = 2;
+    params->dsi.PS = 2;
+    params->dsi.vertical_sync_active = 2;
+    params->dsi.horizontal_sync_active = 2;
+    params->dsi.horizontal_backporch = 42;
+    params->dsi.mode = 3;
+    params->dsi.data_format.color_order = 0;
+    params->dsi.data_format.trans_seq = 0;
+    params->dsi.data_format.padding = 0;
+    params->dsi.intermediat_buffer_num = 0;
+    params->dsi.horizontal_frontporch = 44;
+    params->dsi.LANE_NUM = 4;
+    params->dsi.vertical_backporch = 14;
+    params->dsi.PLL_CLOCK = 198;
+    params->width = 720;
+    params->height = 1280;
+    params->dsi.packet_size = 256;
+    params->dsi.vertical_frontporch = 16;
+    params->dsi.vertical_active_line = 1280;
+    params->dsi.horizontal_active_pixel = 720;
+    params->dsi.ssc_disable = 1;
 }
 static void lcm_init(void)
 {
@@ -349,73 +331,8 @@ static void lcm_update(unsigned int x, unsigned int y,
 
 static unsigned int lcm_compare_id(void)
 {
-    unsigned int id=0;
-    unsigned char buffer[2];
-    unsigned int array[16];
-
-
-    SET_RESET_PIN(1);
-    MDELAY(20);
-    SET_RESET_PIN(0);
-    MDELAY(20);
-    SET_RESET_PIN(1);
-    MDELAY(120);
-
-    array[0]=0x00043902;
-    array[1]=0x9483FFB9;// page enable
-    dsi_set_cmdq(&array, 2, 1);
-    MDELAY(10);
-
-    array[0]=0x00023902;
-    array[1]=0x000013ba;
-    dsi_set_cmdq(&array, 2, 1);
-    MDELAY(10);
-
-    array[0] = 0x00023700;// return byte number
-    dsi_set_cmdq(&array, 1, 1);
-    MDELAY(10);
-
-    read_reg_v2(0xF4, buffer, 2);
-    id = buffer[0];
-
-#ifdef BUILD_LK
-    printf("=====>compare id for test %s, id = 0x%08x\n", __func__, id);
-#else
-    printk("=====>compare id for test %s, id = 0x%08x\n", __func__, id);
-#endif
-
-    return (LCM_ID_HX8394D == id)?1:0;
-
+   return 1;
 }
-
-//static unsigned int lcm_esd_check(void)
-//{
-//  #ifndef BUILD_LK
-//  char  buffer[3];
-//  int   array[16];
-//
-//  if(lcm_esd_test)
-//  {
-//    lcm_esd_test = FALSE;
-//    return TRUE;
-//  }
-//
-//
-//  array[0] = 0x00013700;
-//  dsi_set_cmdq(array, 1, 1);
-//
-//  read_reg_v2(0x0A, buffer, 1);
-//  if(buffer[0]==0x1c)
-//  {
-//    return FALSE;
-//  }
-//  else
-//  {
-//    return TRUE;
-//  }
-// #endif
-//
-//}
 
 static unsigned int lcm_esd_recover(void)
 {
@@ -438,14 +355,6 @@ LCM_DRIVER hx8394d_hd720_dsi_vdo_s35_lcm_drv =
 	.suspend        = lcm_suspend,
 	.resume         = lcm_resume,
 	.compare_id     = lcm_compare_id,
-	//.esd_check = lcm_esd_check,
-	//.esd_recover = lcm_esd_recover,
-#if (LCM_DSI_CMD_MODE)
-        //.set_backlight    = lcm_setbacklight,
-    //.set_pwm        = lcm_setpwm,
-    //.get_pwm        = lcm_getpwm,
-     //   .update         = lcm_update
-#endif
 };
 
 
